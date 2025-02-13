@@ -1,6 +1,5 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
-import { CreateUserInput } from './dtos/create-user.input';
 import { User } from './models/user.model';
 import { Prisma } from '@prisma/clients/jobs-auth';
 import { hash } from 'bcryptjs';
