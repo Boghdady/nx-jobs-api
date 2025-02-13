@@ -14,9 +14,11 @@ export class UsersService {
         email: input.email,
       },
     });
+
     if (user) {
       throw new BadRequestException('User already exists');
     }
+
     return this.prismaService.user.create({
       data: {
         ...input,
