@@ -1,3 +1,3 @@
-export interface TokenPayload {
+export interface ITokenPayload {
   id: number;
 }

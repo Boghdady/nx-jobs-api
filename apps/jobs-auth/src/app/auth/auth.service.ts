@@ -5,7 +5,7 @@ import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { compare } from 'bcryptjs';
 import { LoginInput } from './dto/login.input';
-import { TokenPayload } from './interfaces/token-payload.interface';
+import { ITokenPayload } from './interfaces/token-payload.interface';
 
 @Injectable()
 export class AuthService {
@@ -27,12 +27,12 @@ export class AuthService {
     );
 
     // 3) Generate the jwt payload
-    const TokenPayload: TokenPayload = {
+    const ITokenPayload: ITokenPayload = {
       id: user.id,
     };
 
     // 4) Generate the access token
-    const accessToken = this.jwtService.sign(TokenPayload);
+    const accessToken = this.jwtService.sign(ITokenPayload);
 
     // 5) Set the access token in the cookie
     response.cookie('Authentication', accessToken, {
