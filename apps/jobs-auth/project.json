@@ -24,7 +24,7 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "jobs-auth:build",
-        "runBuildTargetDependencies": false
+        "runBuildTargetDependencies": true
       },
       "configurations": {
         "development": {

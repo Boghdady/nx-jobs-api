@@ -30,4 +30,10 @@ export class UsersService {
   async findAllUsers(): Promise<User[]> {
     return this.prismaService.user.findMany();
   }
+
+  async getUser(args: Prisma.UserWhereUniqueInput) {
+    return this.prismaService.user.findUnique({
+      where: args,
+    });
+  }
 }
