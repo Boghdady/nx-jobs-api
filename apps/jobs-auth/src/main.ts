@@ -18,7 +18,7 @@ async function bootstrap() {
       whitelist: true,
     })
   );
-  const port = app.get(ConfigService).get('AUTH_PORT');
+  const port = app.get(ConfigService).get('PORT');
   await app.listen(port);
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`

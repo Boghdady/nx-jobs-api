@@ -8,6 +8,7 @@ out-tsc
 # dependencies
 node_modules
 
+
 # IDEs and editors
 /.idea
 .project
@@ -40,3 +41,4 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+.env
