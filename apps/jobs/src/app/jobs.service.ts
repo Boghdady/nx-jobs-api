@@ -36,7 +36,10 @@ export class JobsService implements OnModuleInit {
       );
     }
 
-    await job.discoveredClass.instance.execute({}, job.meta.name);
+    await job.discoveredClass.instance.execute(
+      { name: job.meta.name, description: job.meta.description },
+      job.meta.name
+    );
 
     return job.meta;
   }

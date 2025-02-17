@@ -9,7 +9,7 @@ export abstract class AbstractPulsarConsumer {
     private readonly topic: string
   ) {}
 
-  async onInitModule() {
+  async onModuleInit() {
     this.consumer = await this.pulsarClient.createConsumer(
       this.topic,
       this.onMessage.bind(this)

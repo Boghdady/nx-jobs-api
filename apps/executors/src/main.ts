@@ -4,7 +4,7 @@ import { init } from '@jobs-system/nestjs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await init(app, 'jobs');
+  await init(app, 'executors');
 }
 
 bootstrap();
