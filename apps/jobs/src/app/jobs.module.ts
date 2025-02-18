@@ -7,10 +7,12 @@ import { LoadProductsJob } from './jobs/products/load-products.job';
 import { AUTH_PACKAGE_NAME } from 'types/proto/auth';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
+import { PulsarModule } from '@jobs-system/pulsar';
 
 @Module({
   imports: [
     DiscoveryModule,
+    PulsarModule,
     ClientsModule.register([
       {
         name: AUTH_PACKAGE_NAME,
