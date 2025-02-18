@@ -11,3 +11,16 @@ services:
     command: /pulsar/bin/pulsar standalone
     ports:
       - '6650:6650'
+      - '8080:8080' # Required for Pulsar Manager API
+
+  pulsar-manager:
+    image: apachepulsar/pulsar-manager
+    restart: always
+    ports:
+      - '9527:9527' # Pulsar Manager Web UI
+    environment:
+      SPRING_CONFIGURATION_FILE: /pulsar-manager/pulsar-manager/application.properties
+      SUPER_USER_NAME: 'admin'
+      SUPER_USER_PASSWORD: 'admin123' # Set your desired password
+    depends_on:
+      - pulsar
