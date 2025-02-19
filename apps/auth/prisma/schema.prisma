@@ -1,6 +1,6 @@
 generator client {
   provider = "prisma-client-js"
-  output = "../../../node_modules/@prisma/clients/jobs-auth"
+  output = "../../../node_modules/@prisma/clients/auth"
 }
 
 datasource db {

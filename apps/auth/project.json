@@ -1,7 +1,7 @@
 {
-  "name": "jobs-auth",
+  "name": "auth",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/jobs-auth/src",
+  "sourceRoot": "apps/auth/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -29,28 +29,28 @@
       "defaultConfiguration": "development",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "jobs-auth:build",
+        "buildTarget": "auth:build",
         "runBuildTargetDependencies": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "jobs-auth:build:development"
+          "buildTarget": "auth:build:development"
         },
         "production": {
-          "buildTarget": "jobs-auth:build:production"
+          "buildTarget": "auth:build:production"
         }
       }
     },
     "generate-prisma": {
       "command": "prisma generate",
       "options": {
-        "cwd": "apps/jobs-auth"
+        "cwd": "apps/auth"
       }
     },
     "migrate-prisma": {
       "command": "prisma migrate dev",
       "options": {
-        "cwd": "apps/jobs-auth"
+        "cwd": "apps/auth"
       }
     },
     "generate-ts-proto": {
