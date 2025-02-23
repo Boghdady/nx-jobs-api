@@ -3,7 +3,7 @@ import { AuthResolver } from './auth.resolver';
 import { AuthService } from './auth.service';
 import { LoginInput } from './dto/login.input';
 import { User } from '../users/models/user.model';
-import { IGqlContext } from '@jobs-system/nestjs';
+import { IGqlContext } from '@jobs-system/graphql';
 
 describe('AuthResolver', () => {
   let resolver: AuthResolver;

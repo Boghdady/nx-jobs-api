@@ -2,7 +2,7 @@ import { Args, Context, Mutation, Resolver } from '@nestjs/graphql';
 import { AuthService } from './auth.service';
 import { User } from '../users/models/user.model';
 import { LoginInput } from './dto/login.input';
-import { IGqlContext } from '@jobs-system/nestjs';
+import { IGqlContext } from '@jobs-system/graphql';
 
 @Resolver()
 export class AuthResolver {
