@@ -4,7 +4,7 @@ import { FibonacciJob } from './jobs/fibonacci/fibonacci.job';
 import { JobsService } from './jobs.service';
 import { JobsResolver } from './jobs.resolver';
 import { LoadProductsJob } from './jobs/products/load-products.job';
-import { AUTH_PACKAGE_NAME } from 'types/proto/auth';
+import { AUTH_PACKAGE_NAME } from '@jobs-system/grpc';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { PulsarModule } from '@jobs-system/pulsar';
