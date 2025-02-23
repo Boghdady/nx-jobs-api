@@ -10,7 +10,7 @@ import {
   AUTH_PACKAGE_NAME,
   AUTH_SERVICE_NAME,
   AuthServiceClient,
-} from 'types/proto/auth';
+} from '@jobs-system/grpc';
 import { catchError, map, Observable, of } from 'rxjs';
 import { ClientGrpc } from '@nestjs/microservices';
 import { GqlExecutionContext } from '@nestjs/graphql';
